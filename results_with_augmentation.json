@@ -1,0 +1,56 @@
+{
+  "train_images_path": "data/train-images.idx3-ubyte",
+  "train_labels_path": "data/train-labels.idx1-ubyte",
+  "number_of_samples": 500,
+  "augment_images": true,
+  "number_of_augmentations": 5,
+  "train_hog_svm": true,
+  "train_cnn_1layer": true,
+  "train_cnn_3layer": true,
+  "train_cnn_4layer": true,
+  "train_vgg19": true,
+  "output_models_folder": "output_models/",
+  "output_metrics_report": "results_with_augmentation.json",
+  "training_results": [
+    {
+      "model_name": "HogSVM",
+      "weights_file": "output_models/HogSVM_20200127_105836.h5",
+      "accuracy": 0.9972,
+      "precision": 0.9972107171973185,
+      "recall": 0.9972,
+      "f1-score": 0.99719775821672
+    },
+    {
+      "model_name": "Cnn1Layer",
+      "weights_file": "output_models/Cnn1Layer_20200127_105914.h5",
+      "accuracy": 0.9804,
+      "precision": 0.9805869854343957,
+      "recall": 0.9804,
+      "f1-score": 0.9804125400269659
+    },
+    {
+      "model_name": "Cnn3Layer",
+      "weights_file": "output_models/Cnn3Layer_20200127_110014.h5",
+      "accuracy": 0.998,
+      "precision": 0.9980226741100029,
+      "recall": 0.998,
+      "f1-score": 0.998001507794176
+    },
+    {
+      "model_name": "Cnn4Layer",
+      "weights_file": "output_models/Cnn4Layer_20200127_110622.h5",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0
+    },
+    {
+      "model_name": "VGG_19",
+      "weights_file": "output_models/VGG_19_20200127_110721.h5",
+      "accuracy": 0.9876,
+      "precision": 0.9877762027852423,
+      "recall": 0.9876,
+      "f1-score": 0.987622167028508
+    }
+  ]
+}

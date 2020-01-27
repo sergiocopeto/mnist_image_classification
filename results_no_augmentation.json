@@ -1,0 +1,56 @@
+{
+  "train_images_path": "data/train-images.idx3-ubyte",
+  "train_labels_path": "data/train-labels.idx1-ubyte",
+  "number_of_samples": 500,
+  "augment_images": false,
+  "number_of_augmentations": 2,
+  "train_hog_svm": true,
+  "train_cnn_1layer": true,
+  "train_cnn_3layer": true,
+  "train_cnn_4layer": true,
+  "train_vgg19": true,
+  "output_models_folder": "output_models/",
+  "output_metrics_report": "results_no_augmentation.json",
+  "training_results": [
+    {
+      "model_name": "HogSVM",
+      "weights_file": "output_models/HogSVM_20200127_105113.h5",
+      "accuracy": 0.94,
+      "precision": 0.9432702020202021,
+      "recall": 0.94,
+      "f1-score": 0.9398322128851541
+    },
+    {
+      "model_name": "Cnn1Layer",
+      "weights_file": "output_models/Cnn1Layer_20200127_105116.h5",
+      "accuracy": 0.8,
+      "precision": 0.8158333333333334,
+      "recall": 0.8,
+      "f1-score": 0.7970740672444526
+    },
+    {
+      "model_name": "Cnn3Layer",
+      "weights_file": "output_models/Cnn3Layer_20200127_105119.h5",
+      "accuracy": 0.64,
+      "precision": 0.6402083333333334,
+      "recall": 0.64,
+      "f1-score": 0.6036001254240818
+    },
+    {
+      "model_name": "Cnn4Layer",
+      "weights_file": "output_models/Cnn4Layer_20200127_105138.h5",
+      "accuracy": 0.87,
+      "precision": 0.8776904761904762,
+      "recall": 0.87,
+      "f1-score": 0.8664086845466156
+    },
+    {
+      "model_name": "VGG_19",
+      "weights_file": "output_models/VGG_19_20200127_105144.h5",
+      "accuracy": 0.72,
+      "precision": 0.7717360482654599,
+      "recall": 0.72,
+      "f1-score": 0.7297353235000295
+    }
+  ]
+}

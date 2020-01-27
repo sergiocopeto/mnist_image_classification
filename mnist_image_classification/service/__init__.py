@@ -1,0 +1,2 @@
+from mnist_image_classification.service.model_manager import ModelManager
+from mnist_image_classification.service.service import app

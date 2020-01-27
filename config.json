@@ -1,0 +1,14 @@
+{
+  "train_images_path": "data/train-images.idx3-ubyte",
+  "train_labels_path": "data/train-labels.idx1-ubyte",
+  "number_of_samples": 500,
+  "augment_images": true,
+  "number_of_augmentations": 5,
+  "train_hog_svm": true,
+  "train_cnn_1layer": true,
+  "train_cnn_3layer": true,
+  "train_cnn_4layer": true,
+  "train_vgg19": true,
+  "output_models_folder": "output_models/",
+  "output_metrics_report": "results_with_augmentation.json"
+}
