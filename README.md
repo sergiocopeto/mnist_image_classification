@@ -66,10 +66,20 @@ python model_training.py -i config.json
 The service can be started with the following command:
 
 ````
-python run_service.py
+python run_service.py -i config_service.json
 ````
 
-There are some usefull API endpoints:
+Where config_service.json contains the models to be loaded. As an example:
+
+````
+{
+  "hog_smv_path": "output_models/HogSVM_20200127_105836.h5",
+  "cnn_4layer_path": "output_models/Cnn4Layer_20200127_110622.h5",
+  "vgg_19_path": "output_models/VGG_19_20200127_110721.h5"
+}
+````
+
+There are some useful API endpoints:
 
 * /predict_hog_svm (Method: POST): Perform classification using a HOG_SVM model
 * /predict_cnn_4layer (Method: POST): Perform classification using a CNN_4Layer model

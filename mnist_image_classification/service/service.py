@@ -10,6 +10,15 @@ from mnist_image_classification.service import ModelManager
 # Initialize model manager, so we can have multiple models running at the same time
 model_manager = ModelManager()
 
+def load_models(hog_svm_path, cnn_4layer_path, vgg19_path):
+    """
+    Loads target models to the model manager
+    :param hog_svm_path:
+    :param cnn_4layer_path:
+    :param vgg19_path:
+    """
+    return model_manager.load_models(hog_svm_path, cnn_4layer_path, vgg19_path)
+
 app = Flask(__name__, template_folder='templates')
 app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 # Where to store the uploaded files

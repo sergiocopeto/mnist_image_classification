@@ -31,7 +31,7 @@ class ModelManager():
             self.vgg_session = Session()
             with self.vgg_session.as_default():
                 self.vgg19 = VGG_19()
-        self.load_models('output_models/HogSVM_20200127_105836.h5', 'output_models/Cnn4Layer_20200127_110622.h5', 'output_models/VGG_19_20200127_110721.h5')
+
 
     def predict(self, image, model):
         """
@@ -89,11 +89,16 @@ class ModelManager():
         :param hog_model: Path to the HOG_SVM model weights file
         :param cnn_model: Path to the CNN_3Layer model weights file
         :param vgg_model: Path to the VGG19 model weights file
+        :returns: Bool indicating model loading success
         """
-        self.hog_svm.load(hog_model)
-        with self.cnn_graph.as_default():
-            with self.cnn_session.as_default():
-                self.cnn_4layer.load(cnn_model)
-        with self.vgg19_graph.as_default():
-            with self.vgg_session.as_default():
-                self.vgg19.load(vgg_model)
+        try:
+            self.hog_svm.load(hog_model)
+            with self.cnn_graph.as_default():
+                with self.cnn_session.as_default():
+                    self.cnn_4layer.load(cnn_model)
+            with self.vgg19_graph.as_default():
+                with self.vgg_session.as_default():
+                    self.vgg19.load(vgg_model)
+            return True
+        except:
+            return False
