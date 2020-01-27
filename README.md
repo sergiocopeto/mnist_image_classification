@@ -4,11 +4,17 @@ This repository performs some experiments using different image classification m
 It also provides a simple Flask API for classification of images provided by URL's or through it's uploading interface.
 
 ## Setup
+[Download the MNIST dataset](http://yann.lecun.com/exdb/mnist/)
+
+[Download pre-trained models to run on the server](https://drive.google.com/file/d/1FcQx55yHmjiS2nd85hMP6_gopqTzqCw6/view?usp=sharing)
+
 Clone this repository, navigate into it through the command line and run the following command:
 
 ```
 pip install -r requirements.txt
 ```
+
+Extract the downloaded models and datasets to the root of this folder.
 
 This command should install all the needed packages
 

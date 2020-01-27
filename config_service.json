@@ -1,0 +1,5 @@
+{
+  "hog_smv_path": "output_models/HogSVM_20200127_105836.h5",
+  "cnn_4layer_path": "output_models/Cnn4Layer_20200127_110622.h5",
+  "vgg_19_path": "output_models/VGG_19_20200127_110721.h5"
+}
